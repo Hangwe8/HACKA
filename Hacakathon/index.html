@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <title>Eduvos coding club</title>
+    <style>
+       .carousel-caption h1, .carousel-caption p {
+            animation: fadeIn 1.7s ease-in-out;
+        
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Marquee Container */
+        #marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            position: relative;
+            background: #f9f9f9;
+            padding: 20px 0;
+        }
+
+        /* Marquee Content */
+        #marquee-content {
+            display: inline-block;
+            animation: scroll 20s linear infinite; /* Adjust speed here */
+        }
+
+        /* Pause on Hover */
+        #marquee-content:hover {
+            animation-play-state: paused;
+        }
+
+        /* Marquee Animation */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Move only half the width */
+        }
+
+        /* Marquee Items */
+        .marquee-item {
+            display: inline-block;
+            margin-right: 30px;
+            text-align: center;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .marquee-item:hover {
+            transform: scale(1.05);
+        }
+
+        .marquee-item img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .marquee-item h2 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+      .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+      }
+      
+      .fa:hover {
+          opacity: 0.7;
+      }
+      
+      .fa-facebook {
+        color: white;
+      }
+      
+      .fa-twitter {
+        color: white;
+      }
+      
+      .fa-instagram {
+        color: white;
+      }
+      .fa-linkedin {
+        color: white;
+      }
+      .float{
+        position:fixed;
+        width:50px;
+        height:50px;
+        bottom:40px;
+        right:40px;
+        
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:80px;
+        text-align:center;
+      font-size:30px;
+        box-shadow: 2px 2px 3px #999;
+      z-index:100;
+    }
+    
+    .my-float{
+        margin-top:-16px;
+        margin-bottom: 8px;
+        margin-left: -12px;
+        
+     }  
+      /* Dark/Light Mode Toggle Button - Left Side */
+      .bd-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu {
+            left: 0;
+            right: auto; /* Align dropdown to the left */
+        }
+
+     .btn-bd-primary {
+        --bd-violet-bg: #03045e;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #03045e;
+        --bs-btn-hover-border-color: #03045e;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #03045e;
+        --bs-btn-active-border-color: #03045e;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+</head>
+
+<body>
+    <header data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #03045e;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="blessing/img/picsvg_download.svg" alt="eduvos Logo" width="100" height="100"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="resorce.html" class="nav-link">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#contact" class="nav-link">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="CODE HACKA/Eventpage.html">Events</a>
+                        </li>
+
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Welcome to the Eduvos Coding Club</h1>
+                <p class="opacity-75">Join our community of passionate developers, innovators, and tech enthusiasts.</p>
+                <p><a class="btn btn-lg btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScOd9nGR8_CISC__1RkgN_PnhThyaiucnEOAS9Igl8X18Qd0w/viewform">Sign Up</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Stay Updated with Our Events</h1>
+                <p>We regularly host coding workshops, hackathons, and tech talks. Stay tuned for upcoming events!</p>
+                <p><a class="btn btn-lg btn-primary" href="CODE HACKA/Eventpage.html">View Events</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>Access Exclusive Coding Resources</h1>
+                <p>Gain access to coding tutorials, resources, and collaborative projects to improve your skills.</p>
+                <p><a class="btn btn-lg btn-primary" href="resorce.html">Explore Resources</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+<div id="About" class="about-section">
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="blessing/img/Coding.jpg" class="about-image d-block mx-lg-auto img-fluid" alt="Coding Image" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">About Us</h1>
+        <p class="lead">At Eduvos Coding Club, we believe in growing together, learning from one another, and pushing our coding skills to new heights. Whether you're a beginner or an expert, we welcome everyone with a passion for technology.</p>
+        <p>Our goal is to build a collaborative environment where we can work on projects, attend workshops, and share knowledge. By working together, we can all enhance our skills and grow as developers.</p>
+        <p><strong>Anyone can join!</strong> If you're interested in coding, technology, or just want to be part of a vibrant community of like-minded individuals, we're here for you.</p>
+        <p>Join us in this exciting journey, and let's grow together!</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScOd9nGR8_CISC__1RkgN_PnhThyaiucnEOAS9Igl8X18Qd0w/viewform" class="btn register-btn btn-lg px-4 me-md-2">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (dark)">
+          <i class="bi bi-moon-stars-fill me-2"></i>
+          <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-start shadow" aria-labelledby="bd-theme-text">
+          <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <i class="bi bi-sun-fill me-2"></i>
+                  Light
+              </button>
+          </li>
+          <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="true">
+                  <i class="bi bi-moon-stars-fill me-2"></i>
+                  Dark
+              </button>
+          </li>
+          <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                  <i class="bi bi-circle-half me-2"></i>
+                  Auto
+              </button>
+          </li>
+      </ul>
+  </div>
+
+    <section id="marquee" class="container p-3 my-3 borderless text-center">
+      <h1>Our Founders</h1>
+      <div id="marquee-container">
+          <div id="marquee-content">
+              <!-- Founder 1 -->
+              <div class="marquee-item">
+                  <a href="#"><img src="blessing/images/Vusi Kunene Matlou - President.jpeg" alt="President"></a>
+                  <h2>President</h2>
+              </div>
+              <!-- Founder 2 -->
+              <div class="marquee-item">
+                  <a href="#"><img src="blessing/images/Tanatswanashe Mthembu - Vice President.jpeg" alt="Vice President"></a>
+                  <h2>Vice President</h2>
+              </div>
+              <!-- Founder 3 -->
+              <div class="marquee-item">
+                  <a href="#"><img src="blessing/images/Thoriso Dibatana - Treasurer.jpeg" alt="Treasurer"></a>
+                  <h2>Treasurer</h2>
+              </div>
+              <!-- Founder 4 -->
+              <div class="marquee-item">
+                  <a href="#"><img src="blessing/images/Vuyisile Shokane - Events Planner.jpeg" alt="Events Planner"></a>
+                  <h2>Events Planner</h2>
+              </div>
+              <!-- Duplicate Content for Seamless Looping -->
+              <div class="marquee-item">
+                  <a href="#"><img src="blessing/images/Vusi Kunene Matlou - President.jpeg" alt="President"></a>
+                  <h2>President</h2>
+              </div>
+              <div class="marquee-item">
+                  <a href="#"><img src="blessing/images/Tanatswanashe Mthembu - Vice President.jpeg" alt="Vice President"></a>
+                  <h2>Vice President</h2>
+              </div>
+              <div class="marquee-item">
+                  <a href="#"><img src="blessing/images/Thoriso Dibatana - Treasurer.jpeg" alt="Treasurer"></a>
+                  <h2>Treasurer</h2>
+              </div>
+              <div class="marquee-item">
+                  <a href="#"><img src="blessing/images/Vuyisile Shokane - Events Planner.jpeg" alt="Events Planner"></a>
+                  <h2>Events Planner</h2>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=+27 75 186 0003&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+    <footer>       
+      <div id="contact" class="container-fluid footer text-center  text-white p-3 my-3" style=" background-color: #03045e;">
+          <div class="contact-info">
+              <h4>Contact Us</h4>
+              <p><strong>Phone:</strong>011 690 1700</p>
+              <p><strong>Address:</strong>44 Alsatian Rd, Glen Austin AH, Midrand, 1685</p>
+          </div>
+  
+  
+          <section class="text-center py-5">
+           <h1>Ready to Join Us?</h1>
+           <p>Contact us today to learn more about our programs and how to enroll!</p>
+           
+           
+          </section>
+          <div class="social-icons">
+              <a href="https://www.facebook.com/EduvosEducationSA" class="fa fa-facebook"></a>
+              <a href="https://x.com/edu_vos" class="fa fa-twitter"></a>
+              <a href="https://www.instagram.com/eduvoseducation/" class="fa fa-instagram"></a>
+              <a href="https://za.linkedin.com/school/eduvos/?original_referer=https%3A%2F%2Fwww.google.com%2F" class="fa fa-linkedin"></a>
+          </div>
+          <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> EDUVOS Coding club</p>
+          
+  
+   </footer>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+            const marqueeContent = document.getElementById('marquee-content');
+            const marqueeContainer = document.getElementById('marquee-container');
+
+            // Clone the content for seamless looping
+            marqueeContent.innerHTML += marqueeContent.innerHTML;
+
+            // Adjust animation duration based on content width
+            const contentWidth = marqueeContent.scrollWidth / 2; // Divide by 2 for seamless loop
+            const containerWidth = marqueeContainer.offsetWidth;
+            const duration = (contentWidth / containerWidth) * 10; // Adjust speed multiplier
+            marqueeContent.style.animationDuration = `${duration}s`;
+        });
+  </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     <script>
+         // JavaScript to handle theme switching
+         document.addEventListener('DOMContentLoaded', function() {
+             const themeToggle = document.getElementById('bd-theme');
+             const themeText = document.getElementById('bd-theme-text');
+             const savedTheme = localStorage.getItem('theme') || 'auto';
+ 
+             // Set the initial theme
+             setTheme(savedTheme);
+ 
+             // Add event listeners to theme buttons
+             document.querySelectorAll('[data-bs-theme-value]').forEach((button) => {
+                 button.addEventListener('click', () => {
+                     const theme = button.getAttribute('data-bs-theme-value');
+                     setTheme(theme);
+                     localStorage.setItem('theme', theme);
+                 });
+             });
+ 
+             // Function to set the theme
+             function setTheme(theme) {
+                 document.documentElement.setAttribute('data-bs-theme', theme);
+                 themeText.textContent = `Toggle theme (${theme})`;
+ 
+                 // Update the active state of the dropdown items
+                 document.querySelectorAll('[data-bs-theme-value]').forEach((item) => {
+                     item.classList.remove('active');
+                     if (item.getAttribute('data-bs-theme-value') === theme) {
+                         item.classList.add('active');
+                     }
+                 });
+             }
+         });
+     </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

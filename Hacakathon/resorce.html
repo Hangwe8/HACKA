@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>REsorces</title>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Favicon -->
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap 5.3.3 JS (Bundle includes Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO2j9FO9vYp6kBBr5g4zXOxA2g7dx2c4I5jUEw8D2DgFf42nKzF2o2RbqYP2Q" crossorigin="anonymous"></script>
+
+    <!-- Google Maps API (replace YOUR_KEY with your actual API key) -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap" async defer></script>
+
+    <!-- Font Awesome -->
+    
+
+    
+<noscript>
+    <p>Google Maps cannot be loaded because JavaScript is disabled.</p>
+</noscript>
+<meta name="description" content="Welcome to eduvos coding club">
+<meta name="keywords" content="Eduvos , Education, Admissions 2025, Coding club, midrand">
+<meta name="author" content="Blessing ">
+<style>
+    .navbar{
+        background-color: #3096e9;
+    }
+    section {
+      padding: 60px 0;
+  }
+  .section-heading {
+      margin-bottom: 40px;
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      color: #090080;
+  }
+
+  .card {
+      border: none;
+      transition: transform 0.3s;
+      background-color: #f8f9fa;
+  }
+  .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  .card-img-top {
+      height: 250px;
+      object-fit: cover;
+  }
+
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    color: white;
+  }
+  
+  .fa-twitter {
+    color: white;
+  }
+  
+  .fa-instagram {
+    color: white;
+  }
+  .fa-linkedin {
+    color: white;
+  }
+/* Set the default button color to blue */
+.bd-theme {
+    background-color: #03045e; /* Blue background */
+    color: white; /* White text */
+    border: 1px solid #03045e; /* Blue border */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effects for the Button */
+.bd-theme:hover {
+    background-color: #444; /* Darker background on hover */
+    color: white; /* Keep text white */
+}
+
+/* Light Mode Button - Ensure blue background for light mode */
+[data-bs-theme="light"] .bd-theme {
+    background-color: #03045e; /* Ensure blue background */
+    color: white; /* White text */
+    border: 1px solid #03045e; /* Blue border */
+}
+
+/* Dark Mode Button - Ensure blue background for dark mode */
+[data-bs-theme="dark"] .bd-theme {
+    background-color: #03045e; /* Ensure blue background */
+    color: white; /* White text */
+    border: 1px solid #03045e; /* Blue border */
+}
+
+/* Dark/Light Mode Toggle Button - Left Side */
+.bd-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1500;
+}
+
+.bd-mode-toggle .dropdown-menu {
+    left: 0;
+    right: auto; /* Align dropdown to the left */
+}
+
+/* Additional button settings if needed */
+.btn-bd-primary {
+    --bd-violet-bg: #03045e;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #03045e;
+    --bs-btn-hover-border-color: #03045e;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #03045e;
+    --bs-btn-active-border-color: #03045e;
+}
+
+
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark text-body fixed-top" >
+        <a class="navbar-brand" href="#" style="font-weight: bold; font-size: 35px;">
+            <img src="blessing/img/CODING CLUB.jpg" alt="eduvos Logo" width="100" height="100"  > Coding Club </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 20px; font-family:'Montserrat', sans-serif" >
+            <ul class="navbar-nav ml-auto" >
+                <!---nav for learning-->
+                <li class="nav-item"><a class="nav-link" href="index.html" >Home</a></li>
+                <li class="nav-item1 dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      learning platfroms
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="https://www.w3schools.com/">w3schools</a>
+                      <a class="dropdown-item" href="https://education.github.com/pack">github</a>
+                      <a class="dropdown-item" href="https://leetcode.com/">leet code</a>
+                      <a class="dropdown-item" href="https://quickref.me/">cheat sheets</a>
+                    </div>
+                  </li>
+                  <li class="nav-item2 dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Raod Maps
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="https://roadmap.sh/">Road map</a>
+                      <a class="dropdown-item" href="https://1000projects.org/">projects to do</a>
+                      <a class="dropdown-item" href="https://www.codewars.com/">coding news</a>
+                    </div>
+                  </li>
+
+                
+                 <li class="nav-item3 dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      cyber security
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="https://www.hackthebox.com/">cyber security</a>
+                      <a class="dropdown-item" href="https://tryhackme.com/">Hack me</a>
+                      <a class="dropdown-item" href="https://www.codewars.com/">Learn thougt practice</a>
+                    </div>
+                  </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+
+       
+      <section id="engineering">
+          <h2 class="section-heading">learning platfroms</h2>
+          <div class="row align-items-center">
+              <div class="col-md-6">
+                  <img class="img-fluid rounded" src="blessing/images/lear.jpeg" alt="image">
+              </div>
+              <div class="col-md-6">
+                  <p class="lead">we know that learnin by yourself is difficalt because they make it easy and fun to learn programming. You can find lots of courses and tutorials that let you learn at your own pace. Plus, there are usually communities where you can ask questions and share tips. It's a great way to pick up new skills and maybe even open up some job opportunities!</p>
+                  <button type="button" class="btn-primary btn-custom   mb-3" data-toggle="collapse" data-target="#subjects">A few code learning platfroms</button>
+                  <div id="subjects" class="collapse ">
+                      <ul class="list-group">
+                        <a class="dropdown-item" href="https://www.w3schools.com/">w3schools</a>
+                        <a class="dropdown-item" href="https://education.github.com/pack">github</a>
+                        <a class="dropdown-item" href="https://leetcode.com/">leet code</a>
+                        <a class="dropdown-item" href="https://quickref.me/">cheat sheets</a>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section id="matric">
+          <h2 class="section-heading">Cyber security</h2>
+          <div class="row align-items-center">
+              <div class="col-md-6 order-md-2">
+                  <img class="img-fluid rounded" src="blessing/images/cyberlogo.jpeg" alt="Matric">
+              </div>
+              <div class="col-md-6 order-md-1">
+                  <p class="lead">here at the coding club we aslo offer a few ressorces to help uderstand and break into the cyber securityfield.</p>
+                  <button type="button" class="btn-primary btn-custom mb-3" data-toggle="collapse" data-target="#matricSubjects">cyber security resources</button>
+                  <div id="matricSubjects" class="collapse">
+                      <ul class="list-group">
+                        <a class="dropdown-item" href="https://www.hackthebox.com/">cyber security</a>
+                        <a class="dropdown-item" href="https://tryhackme.com/">Hack me</a>
+                        <a class="dropdown-item" href="https://www.codewars.com/">Learn thougt practice</a>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+    
+      <section id="short">
+          <h2 class="section-heading">Road Map to seccses</h2>
+          <div class="row align-items-center">
+              <div class="col-md-6">
+                  <img class="img-fluid rounded" src="blessing/images/roadlogo.png" alt="Short Courses">
+              </div>
+              <div class="col-md-6">
+                  <p class="lead">Making a road map for learning IT skills is super helpful. It gives you a clear plan to follow and breaks things down into easy steps. This keeps you organized and focused, so you know what to learn next. Plus, it’s motivating to see your progress and hit milestones. Overall, it makes learning for an IT job easier and more fun!</p>
+                  <button type="button" class="btn-primary btn-custom mb-3" data-toggle="collapse" data-target="#shortCourses">View Courses</button>
+                  <div id="shortCourses" class="collapse">
+                      <ul class="list-group">
+                        <a class="dropdown-item" href="https://roadmap.sh/">Road map</a>
+                        <a class="dropdown-item" href="https://1000projects.org/">projects to do</a>
+                        <a class="dropdown-item" href="https://www.codewars.com/">coding news</a>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <div class="bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (dark)">
+            <i class="bi bi-moon-stars-fill me-2"></i>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-start shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="true">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                </button>
+            </li>
+        </ul>
+    </div>
+
+ <footer>       
+        <div id="contact" class="container-fluid footer text-center bg-primary text-white p-3 my-3">
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p><strong>Phone:</strong>011 690 1700</p>
+                <p><strong>Address:</strong>44 Alsatian Rd, Glen Austin AH, Midrand, 1685</p>
+            </div>
+    
+    
+            <section class="text-center py-5">
+             <h1>Ready to Join Us?</h1>
+             <p>Contact us today to learn more about our programs and how to enroll!</p>
+             <a href="#contact" class="btn btn-primary">Get in Touch</a>
+             
+            </section>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/EduvosEducationSA" class="fa fa-facebook"></a>
+                <a href="https://x.com/edu_vos" class="fa fa-twitter"></a>
+                <a href="https://www.instagram.com/eduvoseducation/" class="fa fa-instagram"></a>
+                <a href="https://za.linkedin.com/school/eduvos/?original_referer=https%3A%2F%2Fwww.google.com%2F" class="fa fa-linkedin"></a>
+            </div>
+            <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> EDUVOS Coding club</p>
+            
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+      // JavaScript to handle theme switching
+      document.addEventListener('DOMContentLoaded', function() {
+          const themeToggle = document.getElementById('bd-theme');
+          const themeText = document.getElementById('bd-theme-text');
+          const savedTheme = localStorage.getItem('theme') || 'auto';
+
+          // Set the initial theme
+          setTheme(savedTheme);
+
+          // Add event listeners to theme buttons
+          document.querySelectorAll('[data-bs-theme-value]').forEach((button) => {
+              button.addEventListener('click', () => {
+                  const theme = button.getAttribute('data-bs-theme-value');
+                  setTheme(theme);
+                  localStorage.setItem('theme', theme);
+              });
+          });
+
+          // Function to set the theme
+          function setTheme(theme) {
+              document.documentElement.setAttribute('data-bs-theme', theme);
+              themeText.textContent = `Toggle theme (${theme})`;
+
+              // Update the active state of the dropdown items
+              document.querySelectorAll('[data-bs-theme-value]').forEach((item) => {
+                  item.classList.remove('active');
+                  if (item.getAttribute('data-bs-theme-value') === theme) {
+                      item.classList.add('active');
+                  }
+              });
+          }
+      });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+</body>
+
+
+
